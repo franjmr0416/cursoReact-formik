@@ -7,7 +7,7 @@ const TextInput = ({ label, ...props }) => {
   return (
     <div className="estilosControl">
       <label className="estilosLabel">{label}</label>
-      <input className="estilosInput" {...field} />
+      <input className="estilosInput" {...field} {...props} />
       {meta.touched && meta.error ? (
         <div className="estilosError">{meta.error}</div>
       ) : null}

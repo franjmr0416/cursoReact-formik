@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import Checkbox from "./components/Checkbox";
 import TextInput from "./components/TextInput";
 
 const validate = (values) => {
@@ -32,13 +33,10 @@ const App = () => {
         <Form>
           <TextInput name="name" label="Nombre" />
           <br />
-          <label>Apellido</label>
-          <Field name="lastname" type="text" />
-          <ErrorMessage name="lastname" />
+          <TextInput name="lastname" label="Apellido" />
           <br />
-          <label>Correo</label>
-          <Field name="email" type="email" />
-          <ErrorMessage name="email" />
+          <TextInput name="email" label="Correo" type="email" />
+          <Checkbox name="accept">Aceptar términos y condiciones</Checkbox>
           <button type="submit">Enviar</button>
         </Form>
       }
