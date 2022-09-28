@@ -2,20 +2,25 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import Checkbox from "./components/Checkbox";
 import TextInput from "./components/TextInput";
 import Select from "./components/Select";
+import Radio from "./components/Radio";
 
 const validate = (values) => {
   const errors = {};
 
   if (!values.name) {
-    errors.name = "Requerido";
+    errors.name = "Requerido nombre";
   } else if (values.name.length < 5) {
     errors.name = "El nombre es muy corto";
   }
   if (!values.lastname) {
-    errors.lastname = "Requerido";
+    errors.lastname = "Requerido apellido";
   } else if (values.lastname.length < 5) {
     errors.lastname = "El apellido es muy corto";
   }
+  if (!values.radio) {
+    errors.radio = "Requerido radio";
+  }
+
   return errors;
 };
 
@@ -27,6 +32,7 @@ const App = () => {
         lastname: "",
         email: "",
         color: "",
+        radio: "",
       }}
       validate={validate}
       onSubmit={(values) => console.log(values)}
@@ -44,6 +50,10 @@ const App = () => {
             <option value="azul">Azul</option>
             <option value="amarillo">Amarillo</option>
           </Select>
+          <Radio name="radio" value="madera" label="Madera" />
+          <Radio name="radio" value="metal" label="Metal" />
+          <Radio name="radio" value="cemento" label="Cemento" />
+          <ErrorMessage name="radio" />
           <Checkbox name="accept">Aceptar términos y condiciones</Checkbox>
           <button type="submit">Enviar</button>
         </Form>
