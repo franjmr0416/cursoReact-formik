@@ -29,37 +29,19 @@ const App = () => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <label>Nombre</label>
-      <input
-        name="name"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.name}
-      />
+      <input type="text" {...formik.getFieldProps("name")} />
       {formik.touched.name && formik.errors.name ? (
         <div>{formik.errors.name}</div>
       ) : null}
       <br />
       <label>Apellido</label>
-      <input
-        name="lastname"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.lastname}
-      />
+      <input type="text" {...formik.getFieldProps("lastname")} />
       {formik.touched.lastname && formik.errors.lastname ? (
         <div>{formik.errors.lastname}</div>
       ) : null}
       <br />
       <label>Correo</label>
-      <input
-        name="email"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
-      />
+      <input type="text" {...formik.getFieldProps("email")} />
       {formik.touched.email && formik.errors.email ? (
         <div>{formik.errors.email}</div>
       ) : null}
