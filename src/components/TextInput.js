@@ -5,11 +5,11 @@ const TextInput = ({ label, ...props }) => {
 
   console.log({ field, meta });
   return (
-    <div className="estilosControl">
-      <label className="estilosLabel">{label}</label>
-      <input className="estilosInput" {...field} {...props} />
+    <div className="mb-3 col-sm">
+      <label className="form-label">{label}</label>
+      <input className="form-control" {...field} {...props} />
       {meta.touched && meta.error ? (
-        <div className="estilosError">{meta.error}</div>
+        <div className="text-danger">{meta.error}</div>
       ) : null}
     </div>
   );
