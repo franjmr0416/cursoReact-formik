@@ -1,3 +1,9 @@
+# Formulario dinámico con React + Formik
+### PC
+![screenshot-formulario](https://user-images.githubusercontent.com/51140256/192913739-19b38d80-8aab-4e97-aeaa-ebd29037270f.png)
+### Mobile
+<img src="https://user-images.githubusercontent.com/51140256/192913755-c7cc7cf7-d5b0-4c58-b8cc-1dcd53ca98da.png" width="350"/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
